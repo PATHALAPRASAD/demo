@@ -36,6 +36,7 @@ public class DemoController {
     @GetMapping("")
     @Operation(summary = "Get All Students")
     public ResponseEntity<List<StudentResponseDto>> getStudents() {
+        System.out.println("Hello, welcome to GIT");
         List<StudentResponseDto> response = studentService.getStudents();
         return new ResponseEntity<>(response, HttpStatus.ACCEPTED);
     }
